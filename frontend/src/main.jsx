@@ -8,6 +8,7 @@ import './style.css';
 import HomePage from './HomePage.jsx';
 import AboutPage from './AboutPage.jsx';
 import ProductList from './ProductList.jsx';
+import ProductDetail from './ProductDetail.jsx';
 
 import AdminLogin from './AdminLogin.jsx';
 import AdminRegister from './AdminRegister.jsx';
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/products',
     element: <ProductList />, // Daftar produk customer
+  },
+  {
+    path: '/products/:id',
+    element: <ProductDetail />, // Detail produk customer
   },
   {
     path: '/about',

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -23,9 +24,10 @@ const ProductList = () => {
         <h2 className="text-3xl font-bold mb-8 text-center tracking-wide">Our Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
-            <div
+            <Link
+              to={`/products/${product.id}`}
               key={product.id}
-              className="bg-gray-50 rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col items-center"
+              className="bg-gray-50 rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col items-center hover:ring-2 hover:ring-black"
             >
               <img
                 src={product.image_url || "https://via.placeholder.com/150"}
@@ -34,7 +36,7 @@ const ProductList = () => {
               />
               <h3 className="text-lg font-semibold mb-2 text-center">{product.name}</h3>
               <p className="text-gray-700 font-medium text-center">{formatRupiah(product.price)}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
