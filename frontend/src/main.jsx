@@ -7,6 +7,7 @@ import {
 import './style.css';
 import HomePage from './HomePage.jsx';
 import AboutPage from './AboutPage.jsx';
+import ProductList from './ProductList.jsx';
 
 import AdminLogin from './AdminLogin.jsx';
 import AdminRegister from './AdminRegister.jsx';
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomePage />,
+  },
+  {
+    path: '/products',
+    element: <ProductList />, // Daftar produk customer
   },
   {
     path: '/about',
