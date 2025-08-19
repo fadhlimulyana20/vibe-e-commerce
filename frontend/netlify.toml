@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://vibe-e-commerce-production.up.railway.app/:splat" # Your production backend API URL
+  to = "https://vibe-e-commerce-production.up.railway.app/api/:splat" # Your production backend API URL
   status = 200
   force = true # Optional: ensures the redirect happens even if a file exists at the path
 
