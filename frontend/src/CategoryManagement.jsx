@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:3000/api/categories";
+const API_URL = "/api/categories";
 
 const CategoryManagement = () => {
   const [categories, setCategories] = useState([]);
